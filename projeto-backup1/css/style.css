@@ -1,0 +1,359 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 980px;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+}
+
+.nav-index {
+    text-align: right;
+    margin: auto auto;
+    margin-right: 20px;
+}
+
+.nav-index button {
+    background-color: white;
+    color: #007bff9c;
+    padding: 11px;
+}
+
+.nav-index a {
+    text-decoration: none;
+    color: #004691;
+}
+
+.header-nav {
+    width: 1000px;
+    text-align: right;
+    margin: auto auto;
+    margin-right: 20px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.big-container {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 100px;
+    width: 1200px;
+    margin: auto auto;
+    margin-top: 50px;
+    border-radius: 23px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.068);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(5, 5, 5, 0.411);
+}
+
+.file input {
+    border: none;
+}
+
+button {
+    background-color: #004fa3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #002a57;
+}
+
+#product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#product-form input{
+    border-radius: 5px;
+}
+
+#product-form button{
+    border-radius: 5px;
+    width: 200px;
+}
+
+.product-card {
+    display: flex;
+    gap: 15px;
+    background: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.big-container-index{
+    padding-top: 100px;
+}
+
+.container-index {
+    display: flex;
+    width: 700px;
+    margin: auto auto;
+    padding: 30px;
+    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-radius: 23px;
+    box-shadow: 0 0 30px 30px rgba(189, 189, 189, 0.336);
+}
+.container-index img{
+    border-radius: 13px;
+    box-shadow: 0 0 10px 10px rgba(97, 97, 97, 0.103);
+}
+
+.btn-idx {
+    margin: auto auto;
+    text-align: center;
+}
+.btn-idx button{
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.title-p {
+    text-align: left;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.container-login{
+    margin: auto auto;
+    margin-top: 200px;
+    width: 600px;
+    height: 600px;
+}
+.container-login h1{
+    text-align: center;
+    font-size: 33px;
+}
+.container-input{
+    margin: auto auto;
+    height: 200px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.068);
+    backdrop-filter: blur(10px);
+}
+.container-input input{
+    width: 300px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: #535353;
+    border: 1px solid; 
+    color: #b8b8b8; 
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.container-input button{
+    width: 325px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: #004fa3;
+    color: white;
+}
+.container-input a{
+    text-decoration: none;
+    color: #004fa3;
+}
+
+.support-container{
+    width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 60px;
+    border-radius: 23px;
+    box-shadow: 0 0 30px 30px rgba(189, 189, 189, 0.336);
+}
+
+.form-group input{
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    width: 21%;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 10px;
+}
+textarea{
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submit button{
+    margin: 0px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filters input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filters button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #00458f;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #003366;
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: row;
+}
+
+.viewer img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px black;
+}
+
+.viewer .nav {
+    color: white;
+    font-size: 40px;
+    margin: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.viewer .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-thumbs {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.image-thumbs img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.image-thumbs img:hover {
+    transform: scale(1.1);
+}

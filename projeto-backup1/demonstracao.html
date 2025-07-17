@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard de Produtos</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: linear-gradient(45deg, #ffffff4b, #00458f);
+        }
+
+        h1 {
+            color: rgb(0, 33, 94);
+        }
+        h2{
+            color: #002750;
+        }
+    </style>
+    <header>
+        <img src="/img/3.png" alt="logo" width="200px">
+        <div class="nav-index">
+            <button><strong><a href="/login.html">Login <i class="fa-solid fa-right-to-bracket"></i></a></button></strong>
+            <button><strong><a href="/suporte.html">Suporte <i class="fa-solid fa-headset"></i></a></button></strong>
+        </div>
+    </header>    
+    
+    <div class="big-container">
+        <div class="container">
+            <h1><i class="fa-solid fa-box"></i> Registro de Produtos</h1>
+
+            <form id="product-form">
+                <input type="hidden" id="editIndex" />
+                <input type="text" id="name" placeholder="Nome do produto" required />
+                <input type="number" id="price" placeholder="Preço" required />
+                <textarea id="description" placeholder="Descrição" required></textarea>
+                <div class="file">
+                    <input class="input-file" type="file" id="image" accept="image/*">
+                </div>
+                <button type="submit">Salvar Produto</button>
+            </form>
+
+            <h2><i class="fa-solid fa-list-ul"></i> Lista de Produtos</h2>
+            <div id="product-list"></div>
+        </div>
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

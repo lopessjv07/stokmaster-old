@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard de Produtos</title>
+    <style>
+        
+        h1 {
+            color: rgb(0, 33, 94);
+        }
+
+        h2 {
+            color: #002750;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background-color: #002750;
+            color: white;
+            cursor: pointer;
+        }
+
+        .button-group button:hover {
+            background-color: #00458f;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/img/3.png" alt="logo" width="200px">
+        <div class="nav-index">
+            <button><strong><a href="/login.html">Log out <i
+                            class="fa-solid fa-right-to-bracket"></i></a></strong></button>
+            <button><strong><a href="/suporte.html">Suporte <i class="fa-solid fa-headset"></i></a></strong></button>
+        </div>
+    </header>
+
+    <div class="big-container">
+        <div class="container">
+            <h1><i class="fa-solid fa-box"></i> Dashboard de Produtos</h1>
+
+            <!-- Botões de alternância SEMPRE visíveis -->
+            <div class="button-group">
+                <button type="button" onclick="alternarFormulario('produto')">Registro de Produtos</button>
+                <button type="button" onclick="alternarFormulario('saida')">Registro de Saída</button>
+            </div>
+
+            <!-- FORMULÁRIO DE REGISTRO -->
+            <div id="form-produto">
+                <form id="product-form">
+                    <input type="hidden" id="editIndex" />
+                    <input type="text" id="name" placeholder="Nome do produto" required />
+                    <input type="text" id="fornecedor" placeholder="Fornecedor" required />
+                    <input type="text" id="code-product" placeholder="Código do produto" required />
+                    <input type="number" id="price" placeholder="Preço" step="any" required />
+                    <input type="date" id="date-insert" required>
+                    <input type="number" id="quant" placeholder="Quantidade" required/>
+                    <textarea id="description" placeholder="Descrição" required></textarea>
+                    <div class="file">
+                        <input class="input-file" type="file" id="image" accept="image/*" multiple>
+                    </div>
+                    <button><strong>Salvar Produto</strong></button>
+                </form>
+
+                <div class="filters">
+                    <input type="text" id="search-code" placeholder="Buscar por código do produto" />
+                    <input type="text" id="filter-fornecedor" placeholder="Filtrar por fornecedor" />
+                    <input type="text" id="filter-nome" placeholder="Filtrar por nome/modelo" />
+                    <button onclick="applyFilters()"><i class="fa fa-filter"></i> Filtrar</button>
+                    <button onclick="clearFilters()"><i class="fa fa-times"></i> Limpar Filtros</button>
+                </div>
+            </div>
+
+            <div id="form-saida" style="display: none;">
+                <form onsubmit="event.preventDefault(); registrarSaida();">
+                    <input type="text" id="saida-codigo" placeholder="Código do produto" oninput="preencherPorCodigo()"
+                        required>
+                    <input type="text" id="saida-nome" placeholder="Nome do produto">
+                    <input type="text" id="saida-fornecedor" placeholder="Fornecedor">
+                    <input type="text" id="saida-desc" placeholder="Descrição">
+                    <input type="text" id="saida-comprador" placeholder="Nome do comprador" required>
+                    <input type="text" id="saida-preco" placeholder="Preço">
+                    <input type="date" id="date" required/> 
+                    <input type="number" id="saida-quantidade" placeholder="Quantidade de saída" required>
+                    <button type="submit"><strong>Confirmar Saída</strong></button>
+                </form>
+            </div>
+
+            <h2><i class="fa-solid fa-list-ul"></i> Lista de Produtos</h2>
+            <div id="product-list"></div>
+        </div>
+    </div>
+
+    <div id="image-viewer" class="viewer hidden">
+        <span class="close" onclick="closeViewer()">&times;</span>
+        <i class="fa-solid fa-chevron-left nav" id="prev-img" onclick="prevImage()"></i>
+        <img id="viewer-img" src="" alt="Imagem ampliada">
+        <i class="fa-solid fa-chevron-right nav" id="next-img" onclick="nextImage()"></i>
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

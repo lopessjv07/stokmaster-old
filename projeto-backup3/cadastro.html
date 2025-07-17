@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Empresa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            background-image: linear-gradient(45deg, #ffffff4b, #00458f);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/img/3.png" alt="logo" width="200px">
+        <div class="nav-index">
+            <button><strong><a href="/suporte.html">Suporte <i class="fa-solid fa-headset"></i></a></strong></button>
+        </div>
+    </header>
+
+    <div class="container-login">
+        <div class="container-input">
+            <h1>Cadastro da Empresa</h1>
+
+            <input type="text" id="empresa" placeholder="Nome da empresa" required>
+            <input type="text" id="user" placeholder="Nome de usuário" required>
+            <select id="categoria" required>
+                <option value="">Selecione a categoria</option>
+                <option value="Comércio">Comércio</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Indústria">Indústria</option>
+                <option value="Tecnologia">Tecnologia</option>
+            </select>
+            <input type="text" id="cnpj" placeholder="CNPJ da empresa" maxlength="18">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button onclick="cadastrarEmpresa()"><strong>Cadastrar</strong></button>
+            <p>Já possui cadastro? <strong><a href="login.html">Clique Aqui!</a></strong></p>
+        </div>
+    </div>
+
+    <script>
+        function cadastrarEmpresa() {
+            const empresa = document.getElementById('empresa').value.trim();
+            const categoria = document.getElementById('categoria').value;
+            const cnpj = document.getElementById('cnpj').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value;
+
+            if (!empresa || !categoria || !cnpj || !email || !senha) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Aqui poderia ser enviado para o backend com fetch ou AJAX
+            alert("Empresa cadastrada com sucesso!\n\n" +
+                "Nome: " + empresa + "\n" +
+                "Categoria: " + categoria + "\n" +
+                "CNPJ: " + cnpj + "\n" +
+                "Email: " + email
+            );
+
+            // Limpar os campos após cadastro
+            document.getElementById('empresa').value = '';
+            document.getElementById('categoria').value = '';
+            document.getElementById('cnpj').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('senha').value = '';
+        }
+        
+        
+    </script>
+
+</body>
+</html>
